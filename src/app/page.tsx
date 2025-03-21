@@ -6,7 +6,9 @@ import {
   SignedOut,
   UserButton,
 } from '@clerk/nextjs'
-import Image from "next/image";
+import { ArrowBigRightDash } from "lucide-react"
+ 
+import { Button } from "@/components/ui/button"
 
 export default function Home() {
   return (
@@ -24,6 +26,9 @@ export default function Home() {
             </SignedOut>
             <SignedIn>
               <UserButton showName />
+              <Button>
+                <ArrowBigRightDash /> Check your vibe
+              </Button>
             </SignedIn>
         </div>
       </main>
