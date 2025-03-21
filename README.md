@@ -42,9 +42,10 @@ The app will use a modern full-stack architecture with **Next.js** for both the 
 ---
 
 ### **2. Data Model**  
-📌 **#TODO:** *Add ERD Image Here*  
+📌 Find attached the ERD 
 
----
+<img width="820" alt="Screenshot 2025-03-21 at 06 52 43" src="https://github.com/user-attachments/assets/4e9293ae-c83b-4e39-8c9b-6d5ef90fb83e" />
+
 
 ### **3. Key Technical Decisions**  
 
