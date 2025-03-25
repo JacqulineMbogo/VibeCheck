@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { PlusSquare } from "lucide-react";
 import { useState } from "react";
+import NewJournalForm from "./new-jornal-form";
 
 export default function NewJournalPage() {
   const [selectedMood, setSelectedMood] = useState("");
@@ -25,7 +26,7 @@ export default function NewJournalPage() {
           <DialogHeader>
             <DialogTitle>New Journal Entry</DialogTitle>
           </DialogHeader>
-          <JournalForm/>
+          <NewJournalForm/>
         </DialogContent>
       </Dialog>
     </div>

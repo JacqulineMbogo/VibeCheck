@@ -15,14 +15,19 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
-const formSchema = z.object({
+type props = {
+  onSubmit: (data: z.infer<typeof formSchema>) => void;
+};
+
+export const formSchema = z.object({
   content: z.string().min(2, {
     message: "Message must be at least 2 characters.",
   }),
   mood: z.string().min(1, { message: "Please provide a mood" }),
 });
 
-export default function JournalForm() {
+
+export default function JournalForm({onSubmit}:props) {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -30,10 +35,6 @@ export default function JournalForm() {
       mood: "",
     },
   });
-
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-  }
 
   return (
     <Form {...form}>
